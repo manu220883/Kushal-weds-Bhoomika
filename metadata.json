@@ -1,0 +1,6 @@
+{
+  "name": "Kushal & Jeevitha Royal Wedding Celebration",
+  "description": "Sacred Vedic Indian Wedding Invitation & Digital Experience for Kushal and Jeevitha with Muhurtham countdown, live route navigation, traditional Nadaswaram, Vedic rituals, and RSVP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-surface: #fafaeb;
+    --color-surface-dim: #dbdbcd;
+    --color-surface-container: #efefe0;
+    --color-primary: #735c00;
+    --color-primary-container: #d4af37;
+    --color-on-primary-container: #554300;
+    --color-secondary: #476733;
+    --color-outline: #7f7663;
+    --color-outline-variant: #d0c5af;
+  }
+
+  body {
+    font-family: 'Newsreader', 'Noto Serif Kannada', Georgia, serif;
+    background-color: #fafaeb;
+    color: #1b1c14;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-royal {
+    font-family: 'Playfair Display', 'Noto Serif Kannada', Georgia, serif;
+  }
+
+  .font-sans-ui {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Kannada', system-ui, sans-serif;
+  }
+
+  .font-sacred {
+    font-family: 'Cinzel', 'Noto Serif Kannada', Georgia, serif;
+  }
+}
+
+/* Ornate Indian gold foil and border styling */
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.45);
+}
+
+.gold-border-double {
+  border: 3px double rgba(212, 175, 55, 0.6);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #735c00 0%, #b8860b 50%, #735c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-shimmer-bg {
+  background: linear-gradient(135deg, #fdfbf4 0%, #f6f0d8 50%, #faf6e6 100%);
+}
+
+.gold-badge {
+  background: linear-gradient(135deg, #d4af37 0%, #e9c349 50%, #c49a24 100%);
+  color: #241a00;
+}
+
+.gold-ribbon-tag {
+  background: linear-gradient(90deg, #d4af37 0%, #ffd966 50%, #d4af37 100%);
+  color: #3b2800;
+}
+
+/* Subtle traditional paper background texture */
+.paper-pattern {
+  background-color: #fafaeb;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Smooth transitions */
+button, a {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Flower petal falling animation */
+@keyframes fall {
+  0% {
+    transform: translateY(-20px) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(105vh) rotate(360deg) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-petal {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: fall linear forwards;
+}
